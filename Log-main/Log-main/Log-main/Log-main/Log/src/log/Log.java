@@ -17,14 +17,6 @@ public class Log {
 
         FileManager f1 = new FileManager();
         f1.leggiFile();
-        System.out.println();
-        f1.conta();
-        System.out.println();
-        f1.segnalatore();
-        System.out.println();
-        f1.accessiMultipli();
-        System.out.println();
-        f1.ordina();
     }
     
 }
