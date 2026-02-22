@@ -4,7 +4,6 @@
  */
 package logs;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -17,13 +16,24 @@ public class Logs {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         FileManager f1 = new FileManager();
-        f1.leggiFile();
-        List<String[]> dati = new ArrayList<>();
+        
+        List<String[]> dati;
+        dati = f1.leggiFile();
+        System.out.println();
+        
         Gestore g = new Gestore();
+        
         g.accessiFalliti(dati);
+        System.out.println();
+        
         g.intervallo(dati, "14:30:05", "16:00:00");
-        g.ipSpospetti(dati);
+        System.out.println();
+        
+        g.ipSospetti(dati);
+        System.out.println();
+        
+        g.ordinaPerTimestamp(dati);
     }
-    
 }
